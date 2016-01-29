@@ -1,0 +1,30 @@
+- - - - - - - - - - - - - - - - - - - - -
+
+Scrambled Words
+
+Assignment #2
+CIS*1500
+ 
+Carter Bourette
+November 3, 2015
+0916638
+
+- - - - - - - - - - - - - - - - - - - - -
+
+Description & Use:
+
+Enter a file name and the program will scramble
+the text while maintaining readability.
+
+
+Compatibility:
+
+This program was compiled without error
+using: 
+     gcc -std=c99 -Wall -pedantic a2SCRAM.c
+
+
+Limitations:
+
+Program will not work consistently with other
+file types.

@@ -1,0 +1,68 @@
+——————————————————————————————————————————
+
+The Game of Pig
+
+Assignment #1
+CIS*1500
+
+Carter Bourette
+October 1, 2015
+0916638
+
+——————————————————————————————————————————
+
+Description:
+
+Pig is a simple dice game first described 
+by John Scarne in 1951. It is a form of 
+jeopardy dice game, where a players 
+decisions are between protecting current
+gains, or risking current gains to make 
+greater gains.
+
+
+
+Use:
+
+The game begins with player one, players
+turns alternate and have the option of:
+
+- Rolling - Rolling a die with the
+objective being to score as many possible
+points in a turn without rolling a one, 
+where all points accumulated are lost and
+the turn ends.
+
+- Holding - after each roll the player
+has the choice to end there turn and
+'bank' all the points they have accumulated.
+
+The game ends when a player 'banks' an equal
+number to or greater than the winning score
+inputted at the beginning of the game.
+
+
+
+Compatibility:
+
+This program was compiled without error
+using: 
+      gcc -std=c99 -Wall -pedantic
+
+
+
+Requirements of Game:
+
+- Supports two players.
+- Generates random numbers for die.
+- Prints faces of die. (1 - 6)
+- Asks for game total.
+- Compiles -std=c99 -Wall -pedantic
+
+
+Limitations:
+
+The program will generate an infinite
+loop when a char is entered in 
+place of an int in the first prompt 
+asking for game score.
