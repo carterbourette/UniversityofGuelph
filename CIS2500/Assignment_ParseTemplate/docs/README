@@ -1,0 +1,71 @@
+——————————————————————————————————————————
+
+File Auto Template
+
+Assignment #1
+CIS*2500
+
+Carter Bourette
+Jan 24, 2016
+0916638
+
+——————————————————————————————————————————
+
+Description:
+
+The program parses a file containing variables
+(in the form of "key=value\n") and replaces the
+corresponding value in a template file.
+
+
+
+Compilation:
+
+This program is compiled without error in the
+src folder using:
+
+    "gcc -std=c99 -Wall main.c storeval.c template.c -I../include -o ../bin/A1"
+
+The program can be compiled from the parent
+folder (A1 folder) by typing "make".
+
+
+
+Usage:
+
+The program can be run by executing (from the
+A1 folder):
+
+    "./bin/A1 assets/template.txt assets/variables.txt assets/output.txt"
+
+Or by running the Makefile command
+"make run" from the A1 folder.
+
+    "make run"
+
+
+
+Testing:
+
+The program was tested without error using
+the following files:
+
+    - template.txt & variables.txt
+
+
+
+Known Limitations:
+
+The program is limited to the following design
+specifications:
+
+    - Line length 255 characters
+    - Variable and value length will be < 25 characters
+    - Variable name will not contain {, }, or =
+
+
+
+References
+
+
+See Storeval.h, uthash.h for authors of respective code.
