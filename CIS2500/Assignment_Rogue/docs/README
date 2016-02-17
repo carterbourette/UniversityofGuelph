@@ -1,0 +1,71 @@
+——————————————————————————————————————————
+
+Rogue
+
+Assignment #2
+CIS*2500
+
+Carter Bourette
+Feb 18, 2016
+0916638
+
+——————————————————————————————————————————
+
+Description:
+
+A recreation of the classic game of Rogue. In
+this spin off functionality is dumbed-down,
+prepare for the coming of Assignment 3! Assignment
+3 will encompass all your favourite aspects of Rougue.
+
+
+
+Compilation:
+
+This program is compiled without error in the
+src folder using:
+
+    "gcc -std=c99 -Wall main.c interface.c LinkedList.c -lncurses -I../include -o ../bin/A2"
+
+The program can be compiled from the parent
+folder (A2 folder) by typing "make".
+
+
+
+Usage:
+
+The program can be run by executing (from the
+A2 folder):
+
+    "./bin/A2 assets/input.txt"
+
+Or by running the Makefile command
+"make run" from the A2 folder.
+
+    "make run"
+
+
+
+Testing:
+
+The program was tested without error using
+the following files:
+
+    - input.txt
+
+
+
+Known Limitations:
+
+The program is limited to the following design
+specifications:
+
+    - 9 rooms (exceeds specs by 3)
+    - Line length of 150
+    - Level file format (WIDTH ITEM ITEM ITEM)
+
+
+
+References
+
+Used LinkedList Library from personal development.
