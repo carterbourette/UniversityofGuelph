@@ -1,0 +1,20 @@
+.c(rel="stylesheet" type="text/css" href="style.css")
+
+.e(exe="caller.py welcome" params="$_GET['userid']")
+
+.b(name="PHPCALL_if(isset($_GET['sort']) && $_GET['sort'] == 'alpha') {echo 'Sort Chrono';} else {echo 'Sort Alpha';}_PHPCALL", link="view.php?view=stream.wpmlPHPCALL_ transferSession($_GET); _PHPCALL")
+.b(name="Mark All as Read", link="process.php?form=markPHPCALL_transferSession($_GET);_PHPCALL")
+.b(name="Check Posts", link="view.php?view=stream.wpmlPHPCALL_transferSession($_GET);_PHPCALL")
+.b(name="Change Author", link="index.php")
+.b(name="Add/Edit Author", link="process.php?view=addorremove.wpmlPHPCALL_transferSession($_GET);_PHPCALL")
+.b(name="New Post", link="process.php?view=post.wpmlPHPCALL_transferSession($_GET);_PHPCALL")
+.d()
+
+
+.h(text="Streams List...")
+.t(text="Select a stream to view: ")
+.e(exe="caller.py format-list" params="$_GET['userid']")
+.z().z()
+
+.e(exe="caller.py paginate" params="$_GET['userid'], $_GET['stream'], $_GET['msg']")
+.e(exe="caller.py view" params="$_GET['userid'], $_GET['stream'], $_GET['msg'], $_GET['sort']")

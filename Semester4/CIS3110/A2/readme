@@ -1,0 +1,73 @@
+——————————————————————————————————————————
+
+Operating Systems
+
+Assignment #2
+CIS*3110
+
+Carter Bourette
+Feb 27, 2017
+0916638
+cbourett@mail.uoguelph.ca
+cbourette@gmail.com
+
+——————————————————————————————————————————
+
+# Description:
+
+This program is a simple CPU scheduler. The simulation is of a next event structure.
+The simulator is comprised of an event queue and a simulation clock. Every time the
+simulation clock runs - for every time unit - the simulator checks for any new event arrivals.
+
+
+    Round Robin Scheduler Process:
+
+        Step 1: Fetch the next thread from the ready queue.
+        Step 2: Check to see if we can operate on the thread (not blocked).
+        Step 3: Do the process or thread switch.
+        Step 4: Change the process status from ready to running.
+        Step 5: Perform burst operation for given quantum time.
+        Step 6: Change the process status to respective state. (Ready | Blocked | Terminated)
+        Step 7: Repeat until there are no processes left to complete.
+
+    First-Come-First-Serve Scheduler Process:
+
+        Step 1: Fetch the next thread from the ready queue.
+        Step 2: Do the process or thread switch.
+        Step 3: Change the process status from ready to running.
+        Step 4: Perform burst operation until complete. (wait on IO)
+        Step 5: Change the process status to respective state. (Ready | Blocked | Terminated)
+        Step 6: Repeat until there are no processes left to complete.
+
+## Assumptions:
+
+    i.   Does your simulator include switch overhead for the first ready state to running state transition? Explain.
+    ii.  Does your simulator include switch overhead if a thread moves from ready state to running state and the CPU is idle? Explain.
+    iii. Does your simulator include switch overhead if a thread moves from running state to blocked state and the ready queue is empty? Explain.
+    iv.  Does your simulation include switch overhead if a thread is interrupted (due to a time slice) and either the ready queue is empty or the thread has the highest priority? Explain.
+
+    The only overhead included in the simulation is in switching processes (given by the process
+    switch time) or switching threads (given by thread switch time). Overhead switch time is included
+    when a thread switches from ready state to a running state. For the purposes of this assignment
+    there is no overhead associated with changing states (other than a process or thread switch when
+    the cpu is actually running). The simulation does not consider the initial process or thread switch.
+     Therefore the first CPU task starts at time = 0.
+
+
+# Compilation:
+
+This program can be compiled without error from the A2 folder using:
+
+        "make"
+
+
+# Usage:
+
+The program can be run by executing the following (from the
+A2 folder):
+
+    ./simcpu [-v verbose] [-d detailed] [-r quantum Round Robin]  < [input file]
+
+Or by running the Makefile command from the A2 folder.
+
+    "make run"

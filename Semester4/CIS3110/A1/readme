@@ -1,0 +1,49 @@
+——————————————————————————————————————————
+
+Operating Systems
+
+Assignment #1
+CIS*2520
+
+Carter Bourette
+Jan 30, 2017
+0916638
+
+——————————————————————————————————————————
+
+# Description:
+
+This program is a simple UNIX shell implementation allowing the user to
+perform a collection of command:
+    Internal Commands
+    -   exit : Quits the shell.
+    -   command w/o args
+    -   command with args
+    -   background tasks "&" : Spawns a child process while retaining focus in parent
+    -   redirect output ">" : Pipes output to specified file. command > filename
+    -   get input "<" :
+    New Commands
+    -   args : which counts and displays the arguments of the shell.
+    -   add : which accepts integer and hex arguments (in form 0xa)
+        and converts and add the given arguments to base 10.
+    -   guess: guessing game format: "guess [size of set] [your guess]".
+        type guess for help.
+    -   author: which displays information about me.
+
+# Compilation:
+
+This program can be compiled without error from the A1 folder using:
+
+        "make"
+
+
+# Usage:
+
+The program can be run by executing the following (from the
+A1 folder):
+
+    "./A1"
+
+Or by running the Makefile command from the A1 folder.
+
+    "make run"

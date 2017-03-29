@@ -1,0 +1,82 @@
+- .h(text="Description").t(file="./textfile")
+-
+- In this case ./textfile is a file containing the text to read and print
+- to the screen.
+-
+- Multiple tags can be included for each element. The heading size
+- could be indicated using:
+-
+- .h(text="Description",size=5).t(text="This is the text...")
+
+
+
+- . Root Directory and separator for directory levels.
+-
+- b Button - clickable button.
+- 	name="<name>"  -string containing an identifier for the button
+- 	link="<page>"  -string containing the page linked to the button
+-   You can use css for buttons if you wish.
+-
+- d Draw a horizontal line. There are no arguments to this tag.
+-
+- e Executable -runs a program on the server.
+- 	exe="<filename>"  -executes the program <filename> on the server
+-   Found in the directory containing the web page, or in the ./bin directory,
+-   or in the system bin directory. Search for the <filename> executable in
+-   that order.
+-
+- h Heading - can contain two arguments:
+- 	size=<1-6>  -indicates the heading size, optional, default is 3
+- 	text="..."  -indicates the text to print in the heading
+- 			The default text is "HEADING".
+-
+- i Input - allow the user to submit one or more text fields.
+- 	Use a form to create the text input. Arguments to the tag are:
+- 	 action="<filename>" -indicates the page which processes the buttons.
+- 	 text="..." -the label which is printed before the field
+- 	 name="<name>"  -name which the text field will be associated with
+- 	 value="<value>"  -indicates the default value for a field
+- 	Create a submit button at the end of the form.
+- 	The text/name/value fields must appear as sets of three. For each
+- 	input field the three fields must be listed in order. For example, to
+- 	create a single input field could look like this:
+- 		i(action="phone.php",text="Phone Number",name="number",
+- 		  value="123-456-7890",)
+- 	This would create an input field labeled "Phone Number" which
+- 	contains the default value "123-456-7890". When the submit button
+- 	is pressed the page phone.php will be called on the server with
+- 	number set equal to the phone number.
+- 	Use post to send the data.
+-
+- l Link - to a web page.
+- 	text="..."  -the text between the quotes is printed as the link
+- 			The default text is "link".
+- 	link="<url>"  -contains the URL to which the link leads
+-
+- p Picture - Insert an image into the page.
+- 	image="..."  -contains the image name
+- 	size=<width>x<height>  -indicates the width and height of the image
+- 		Default height and width are 100.
+-
+- r Radio Button -provide a list of options, the user can select one
+- 	Use a form to create a set of radio buttons.
+- 	 action="<filename>" -indicates the page which processes the buttons.
+- 	 name="<name>"  -name which the result will be associated with
+- 	 value="<value>"  -indicates the value for a button, there can be
+- 		more than one value tag, for example the following could
+- 		pick between red, green, and blue:
+- 		r(action="radio.php",name="colour",value="red",value="green",value="blue")
+- 	Make the first button the default value.
+- 	Use post to send the data.
+-
+- t Text - Adds text to the screen. It has two arguments which indicate
+- 	where the text is located. Only one argument is used per t tag.
+- 	 file="<filename>"  -the text is in the file named <filename>
+- 	 text="..."  -the text is the string between the quotes
+- 			The default text is "Default text".
+- 	Note that the text itself from either the file or string
+- 	can contain HTML tags.
+-
+-
+- Name the web page mark up files with a .wpml suffix.
+-

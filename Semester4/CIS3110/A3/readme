@@ -1,0 +1,78 @@
+——————————————————————————————————————————
+
+#   Operating Systems #
+##  Assignment #3     ##
+### Mutual Exclusion and Memory Management ###
+CIS*3110
+
+Carter Bourette
+March 27, 2017
+0916638
+cbourett@mail.uoguelph.ca
+
+——————————————————————————————————————————
+
+# Description:
+
+This assignment is comprised of two programs:
+
+    (1) Dining Philosophers:
+
+        An implementation of the dining philosopher problem using a C mutex.
+        Each process checks a shared variable or a pile of forks to see if
+        there are enough resources to continue. Since each philosopher req-
+        uires two forks to eat we check that the pile contains more than
+        one fork before the philosopher tries to eat. If the philosopher
+        cannot eat due to a lack of resources he can think while waiting for
+        a fork. The dining philosopher algorithm in my implementation uses a
+        mutex to lock the resource in use during manipulation.
+
+    (2) Memory Mapper:
+
+        Create a simulator to utilize four memory mapping functions (First-Fit,
+        Best-Fit, Worst-Fit, and Next-Fit) to map memory for given processes
+        (see Assumptions) in virtual memory 128MB of space.
+
+        First-Fit:
+            Inserts into the first available location. Strips oldest
+            memory process if no room available.
+
+        Best-Fit:
+
+            Inserts process into the smallest suitable hole. Strips oldest
+            memory process if no room available.
+
+        Worst-Fit:
+
+            Inserts process into the largest available hole. Strips oldest
+            memory process if no room available.
+
+        Next-Fit:
+
+            Identical to first-fit except inserts process starting at the end
+            index of the last insertion. Strips oldest memory process if no
+            room available.
+
+## Assumptions:
+
+    Input file for Part 2 will be in the format of:
+
+        [ unique_id ] [ memory_load_size_MB ]
+
+
+
+# Compilation:
+
+This program can be compiled without error from the A3 folder using:
+
+        "make"
+
+
+# Usage:
+
+The programs can be run by executing the following (from the
+A3 folder):
+
+    ./dine [ num_philosophers ] [ num_times_to_eat ]
+
+    ./holes [ input_file ]

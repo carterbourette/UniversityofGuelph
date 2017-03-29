@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+* {
+    font-family: Avenir Next;
+    font-family: 'Muli', sans-serif;
+    font-size:1.05rem;
+}
+
+html,body {
+    background: RGB(242, 242, 242);
+}
+
+label {
+    display:block;
+}
+
+input {
+    display:block;
+    width:15em;
+}
+
+input[type="checkbox"] {
+    display:inline;
+}
+
+input[type="submit"] {
+    display:block;
+    margin-top:1.5em;
+    font-size:1.05rem;
+}
+
+form {
+    display:inline;
+}
+
+button {
+    display: inline;
+}
+
+.card {
+    width:40%;
+    min-width:400px;
+    max-height:550px;
+    overflow: auto;
+    margin: 0 auto;
+    background: RGB(70, 72, 76);
+    background: RGBA(70, 72, 76,0.4);
+    padding: 1em 2em;
+    border-radius: 2.3%;
+}

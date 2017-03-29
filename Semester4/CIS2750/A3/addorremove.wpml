@@ -1,0 +1,8 @@
+.c(rel="stylesheet" type="text/css" href="style.css")
+.b(name="Home", link="view.php?view=stream.wpmlPHPCALL_transferSession($_GET);_PHPCALL")
+.h(text="Add or Remove a User").t(text="Streams currently subscribed to: [")
+.e(exe="caller.py list" params="$_GET['userid']")
+.t(text="]")
+.z()
+.z()
+.t(text="<form action='process.php?form=addremovePHPCALL_transferSession($_GET);_PHPCALL' method='post'><label>Username:<input type='text' name='username' value='PHPCALL_if(isset($_GET['userid'])){echo $_GET['userid']; }_PHPCALL' placeholder='Name of user here...' /></label><label>Stream:<input type='text' name='stream' placeholder='Name of new stream or CSV list.' /></label><label>Remove:<input type='checkbox' name='remove' value='1' /></label><input type='submit' /></form>")

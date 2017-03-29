@@ -1,0 +1,7 @@
+.c(rel="stylesheet" type="text/css" href="style.css")
+.b(name="Home", link="view.php?view=stream.wpmlPHPCALL_transferSession($_GET);_PHPCALL")
+.h(text="Add a Post")
+
+.t(text="<form action='process.php?form=post' method='post'><input type='hidden' name='userid' value='PHPCALL_echo $_GET['userid'];_PHPCALL' /><label>Stream:<select name='stream'><option>- Select Stream -</option>")
+.e(exe="caller.py format-options" params="$_GET['userid'], $_GET['stream']")
+.t(text="</select></label><label>Message:<br><textarea style='width:600px; height:300px;' name='message' placeholder='Enter a message here...'></textarea></label><input type='submit' /></form>")
