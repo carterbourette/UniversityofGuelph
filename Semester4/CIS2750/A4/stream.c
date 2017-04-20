@@ -104,7 +104,7 @@
          if (output) {
             fgets(returnStr, 199, output);
             authorID = stringify(returnStr);
-            pclose(output);
+            fclose(output);
         } else printError("Failed to insert!", 1);
 
          /* Insert the stream if it does not exist, get it's id */
@@ -124,7 +124,7 @@
          if (output) {
              fgets(returnStr, 199, output);
              streamID = stringify(returnStr);
-             pclose(output);
+             fclose(output);
          } else printError("Failed to insert!", 1);
 
          /* Insert the user into the stream - streamlist */
@@ -134,7 +134,7 @@
          bufferAppend(b,streamID);
          bufferAppend(b,",0)");
          output = query(b->buffer);
-         if (output) pclose(output);
+         if (output) fclose(output);
          bufferClear(b);
 
          free(authorID);
@@ -176,7 +176,7 @@
         if (output) {
             fgets(returnStr, 199, output);
             authorID = stringify(returnStr);
-            pclose(output);
+            fclose(output);
         }
 
         /* Query the stream ID */
@@ -188,7 +188,7 @@
         if (output) {
             fgets(returnStr, 199, output);
             streamID = stringify(returnStr);
-            pclose(output);
+            fclose(output);
         }
 
         /* Delete all from streamlist where stream= streamID and author = author ID */
@@ -289,7 +289,7 @@
    *
    * IN: (char*) query string.
    * RETURN: NONE.
-   * NOTE: Caller must free. See pclose();
+   * NOTE: Caller must free. See fclose();
    **/
    FILE* query(char* query) {
        Buffer* b = newBuffer(250);

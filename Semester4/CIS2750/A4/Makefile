@@ -28,7 +28,7 @@ A3: $(SRC)parse.o $(SRC)stringy.o
 #A4
 A4: $(SRC)db.o $(SRC)stringy.o
 	#	For linux distrobution
-	#gcc $(SRC)db.o $(SRC)stringy.o -o mydb -lmysqlclient -L/usr/lib/x86_64-linux-gnu/
+	#gcc $(SRC)db.o $(SRC)stringy.o -o db -lmysqlclient -L/usr/lib/x86_64-linux-gnu/
 
 	#	For mac
 	gcc `mysql_config --include` $(SRC)db.o $(SRC)stringy.o `mysql_config --libs` -o db

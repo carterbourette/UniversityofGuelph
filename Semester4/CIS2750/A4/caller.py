@@ -14,11 +14,9 @@ if __name__ == "__main__":
 
     #   ./caller view <username> <stream> <msg>
     if args[1] == "view":
-        print args
         if len(args) < 3:
             exit(1)
         myBoard = view.MessageBoard(args[2], args[3])
-
         #   Call sort if the param is passed
         if len(args) > 4:
             if str(args[4]) == "alpha":
@@ -29,7 +27,7 @@ if __name__ == "__main__":
                 myBoard.sort(False)
 
         print "<div class=\"card\">"
-        if len(args) > 4 and str(args[4]) != "sorted":
+        if len(args) > 4 and str(args[4]) != "alpha":
             print myBoard.postList[int(args[4])].toHTML()
             myBoard.msgIndex = int(args[4])
             myBoard.markAsRead()
@@ -54,8 +52,10 @@ if __name__ == "__main__":
             curr = myBoard.msgIndex + 1
         elif myBoard.msgIndex > len(myBoard.postList):
             curr = myBoard.msgIndex - 1
-        else:
+        elif myBoard.msgIndex == len(myBoard.postList):
             curr = myBoard.msgIndex - 1
+        else:
+            curr = myBoard.msgIndex
 
         last = curr - 1
         nxt = curr + 1
@@ -75,7 +75,6 @@ if __name__ == "__main__":
             print str(int(args[4]) + 1) + "/" + str(len(myBoard.postList))
 
         print "<form action=\"view.php?view=stream.wpml&userid=" + myBoard.username + "&stream=" + args[3] + "&msg="+ str(nxt)+"\" method=\"post\"><button>Next</button></form>"
-
 
     #   Mark as read <username> <stream> <post>
     elif args[1] == "mark":

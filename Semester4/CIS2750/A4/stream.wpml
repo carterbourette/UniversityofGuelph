@@ -2,7 +2,7 @@
 
 .e(exe="caller.py welcome" params="$_GET['userid']")
 
-.b(name="PHPCALL_if(isset($_GET['sort']) && $_GET['sort'] == 'alpha') {echo 'Sort Chrono';} else {echo 'Sort Alpha';}_PHPCALL", link="view.php?view=stream.wpmlPHPCALL_ transferSession($_GET); _PHPCALL")
+.b(name="PHPCALL_if(isset($_GET['sort']) && $_GET['sort'] == 'alpha') {echo 'Sort Chrono';} else {echo 'Sort Alpha';}_PHPCALL", link="view.php?sortchange=1&view=stream.wpml&PHPCALL_ transferSession($_GET); _PHPCALL")
 .b(name="Mark All as Read", link="process.php?form=markPHPCALL_transferSession($_GET);_PHPCALL")
 .b(name="Check Posts", link="view.php?view=stream.wpmlPHPCALL_transferSession($_GET);_PHPCALL")
 .b(name="Change Author", link="index.php")

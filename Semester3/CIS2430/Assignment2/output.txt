@@ -1,0 +1,8 @@
+type = "book"
+productID = "123456"
+name = "Name"
+price = "10"
+year = "2016"
+author = "Carter"
+publisher = "pub"
+

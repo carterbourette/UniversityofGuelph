@@ -5,13 +5,26 @@
  * cbourette@gmail.com  |  cbourett@mail.uoguelph.ca
  **/
 
-     function transferSession($arr) {
+     /**
+      * transferSession
+      * Transfer the get session to the next page through url param list.
+      *
+      * IN: $arr $_GET.
+      * RETURN: (String) url list.
+      *
+      **/
+     function transferSession($arr, $arg=null) {
          $string = "";
          foreach ($arr as $key=>$value) {
-             if ($key != "view") {
+             if ($key != "form" && $key != "view" && $key != "sortchange") {
                 $string = $string . "&" . $key . '=' . $value;
              }
-         } echo $string;
+         }
+         if (null === $arg) {
+             echo $string;
+         } else {
+             return $string;
+         }
      }
 
     /**
@@ -36,9 +49,15 @@
             }
         }
     }
-
     //  If the view is specified, just render it.
     if (isset($_GET['view']) && isset($_GET['userid']) && $_GET['userid'] != "") {
+        if(isset($_GET['sortchange'])) {
+            if ((!isset($_GET['sort'])) || (isset($GET['sort']) && $_GET['sort'] == 'chrono')) {
+                header("Location:view.php?" . transferSession($_GET,1) . "&sort=alpha");
+            } else {
+                header("Location:view.php?" . transferSession($_GET,1) . "&sort=chrono");
+            }
+        }
         render($_GET['view']);
     } else {
         /*  Delegate the view params  */
@@ -51,6 +70,14 @@
             }
         } else {
             //  If the stream and message is specifed get them and render
+            if(isset($_GET['sortchange'])) {
+                echo "now here";
+                if ((!isset($_GET['sort'])) || (isset($GET['sort']) && $_GET['sort'] == "chrono")) {
+                    header("Location:view.php?" . transferSession($_GET,1) . "&sort=alpha");
+                } else {
+                    header("Location:view.php?" . transferSession($_GET,1) . "&sort=chrono");
+                }
+            }
             render('stream.wpml');
         }
     }

@@ -2,12 +2,12 @@
 
 Software System Integration and Development
 
-Assignment #3 - Message Management and Viewer meets the web
+Assignment #4 - Message Management and Viewer meets the web
 CIS*2750
 
 Carter Bourette
 cbourette@gmail.com  |  cbourett@mail.uoguelph.ca
-March 17, 2017
+March 31, 2017
 0916638
 
 ——————————————————————————————————————————
@@ -16,12 +16,12 @@ Description:
 
 This program is a message management and viewer system. The system is comprised
 of (1) Post program, (2) add author, and (3) python viewer with the addition of the
-Web interface.
+Web interface and database.
 
 
 Compilation:
 
-This program can be compiled without error from the A3 folder:
+This program can be compiled without error from the A4 folder:
 
  by typing "make".
 

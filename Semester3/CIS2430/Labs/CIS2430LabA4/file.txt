@@ -1,0 +1,5 @@
+Porsche Cayman 2016 78000 0 
+Volvo V70 2002 4500 0
+Ford Expedition 2009 38000 1 6 true Firestone 
+Chevy Tahoe 2011 41000 1 5 false Michelin 
+Toyota Camry 2005 8000 0

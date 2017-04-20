@@ -1,0 +1,82 @@
+——————————————————————————————————————————
+
+Data Structures
+
+Assignment #3
+CIS*2520
+
+Carter Bourette
+Nov 7, 2016
+0916638
+
+——————————————————————————————————————————
+
+Description:
+
+This program is a two part assignment Part(1)
+is a equation parser into binary tree.
+Part (2) is a heap structure implementation
+with a 20x10 array of data.
+
+
+
+Compilation:
+
+This program can be compiled without error from /src using:
+
+    "gcc -std=c99 -Wall p1.c Tree.c -I../include -o ./A3p1"
+    "gcc -std=c99 -Wall p2.c -I../include -o ./A3p2"
+
+The program can also be compiled by typing "make".
+
+
+
+Usage:
+
+Part 1:
+The program can be run by executing (from the
+A3 folder) with a string input:
+
+    "./A2p1 "(((x1+5.12)*(x2-7.68))/x3)" "
+
+Or by running the Makefile command
+"make run" from the A3 folder.
+
+    "make P1"
+
+Part 2:
+The program can be run by executing (from the
+A3 folder):
+
+    ./A2p2
+
+Or by running the Makefile command
+"make run" from the A3 folder.
+
+    "make P2"
+
+
+
+Limitations:
+
+The algorithm used to design the tree diagram is buggy
+and leaves out some floating point numbers. Numeric inputs
+must contain a decimal. Part B is limited to a 20x10 grid
+and fixed to the given file format.
+
+
+
+Testing:
+
+Testing is done using unit test assertions. By passing
+each assertion test we verify that the programs vital
+functions can be report and respond correctly. See
+Testing.h for more on assertions.
+
+
+
+References:
+
+The function I use to draw the tree was found on Stack
+Overflow by a very helpful man. His answer can be found
+at http://stackoverflow.com/a/13755911.

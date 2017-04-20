@@ -1,0 +1,95 @@
+——————————————————————————————————————————
+
+Data Structures
+
+Assignment #2
+CIS*2520
+
+Carter Bourette
+Oct 17, 2016
+0916638
+
+——————————————————————————————————————————
+
+Description:
+
+This program is a two part assignment Part(1)
+is a tracker for a car rental establishment.
+Part (2) is a post-fix math calculator with a
+stack implementation.
+
+
+
+Compilation:
+
+This program can be compiled without error from /src using:
+
+    "gcc -std=c99 -Wall p1.c Cars.c Parse.c LinkedList.c -I../include -o ./A2"
+    "gcc -std=c99 -Wall p2.c LinkedList.c Part2.c -I../include -o ./A2"
+
+The program can also be compiled by typing "make".
+
+
+
+Usage:
+
+Part 1:
+The program can be run by executing (from the
+A2 folder):
+
+    "./A2p1"
+
+Or by running the Makefile command
+"make run" from the A2 folder.
+
+    "make P1"
+
+Part 2:
+The program can be run by executing (from the
+A2 folder) with a string:
+
+    ./A2p2 "12+53-*"
+
+Or by running the Makefile command
+"make run" from the A2 folder.
+
+    "make P2"
+
+
+
+File Structure for Cars:
+
+The data is stored in car.txt in the format of:
+
+    [listIdentifier]
+    PlateNumber    Mileage    ReturnDate
+    or
+    [listIdentifier]
+    PlateNumber\tMileage\tReturnDate
+
+
+Limitations:
+
+The program is limited by the specification of date,
+the date format (yymmdd) faces the issue of being
+misrepresented in years ending in 00 as an integer
+cannot be prefixed with a zero. Storing dates as
+two characters also poses an the Y2K issue. Where
+the year is indistinguishable from the previous century.
+
+
+
+Testing:
+
+Testing is done using unit test assertions. By passing
+each assertion test we verify that the programs vital
+functions can be report and respond correctly. See
+Testing.h for more on assertions and TestDriver.c for
+regression tests.
+
+
+
+References:
+
+LinkedList.c comes from my personal development library
+and was altered for this assignment.

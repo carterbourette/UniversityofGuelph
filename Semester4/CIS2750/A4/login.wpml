@@ -1,1 +1,0 @@
-.h(title="Login").i(action="something.php",text="Name: ", name="userid", value="Enter name here...", text="text 2" name="name 2", value="value 2").d().t(text="hello world").r(action="radio.php",name="colour",value="red",value="green",value="blue")

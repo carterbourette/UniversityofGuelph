@@ -49,7 +49,7 @@
         <div id="page">
             <div class="display">
                 <fieldset>
-                    <legend>Login to A3 Web Interface</legend>
+                    <legend>Login to A4 Web Interface</legend>
                     <form action="process.php?form=login" method="post">
                         <table width="100%">
                             <tr>

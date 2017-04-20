@@ -231,15 +231,14 @@ class MessageBoard:
             if markAll:
                 #   Count the total, set the lastMsg val to the count.
                 sizeOfList = len(self.postList)
-                fo = query("Select StreamList.id FROM (StreamList INNER JOIN Author ON StreamList.author=Author.id) INNER JOIN Stream ON StreamList.stream=Stream.id where username='"+ self.username +"' and streamname='"+ stream +"'")
+                fo = query("Select StreamList.id FROM (StreamList INNER JOIN Author ON StreamList.author=Author.id) INNER JOIN Stream ON StreamList.stream=Stream.id where username='"+ str(self.username) +"' and streamname='"+ str(stream) +"'")
                 for line in fo:
-                    query("UPDATE StreamList SET lastMsg="+sizeOfList+" WHERE id="+ line)
+                    query("UPDATE StreamList SET lastMsg="+str(sizeOfList)+" WHERE id="+ str(line))
                 fo.close()
             else:
                 #   Set the current stream lastMsg index to msgIndex
-                fo = query("Select StreamList.id FROM (StreamList INNER JOIN Author ON StreamList.author=Author.id) INNER JOIN Stream ON StreamList.stream=Stream.id where username='"+ self.username +"' and streamname='"+ stream +"'")
+                fo = query("Select StreamList.id FROM (StreamList INNER JOIN Author ON StreamList.author=Author.id) INNER JOIN Stream ON StreamList.stream=Stream.id where username='"+ str(self.username) +"' and streamname='"+ str(stream) +"'")
                 for line in fo:
-                    print "Update StreamList SET lastMsg=" + str(self.msgIndex) + " WHERE id=" + str(line)
                     query("Update StreamList SET lastMsg=" + str(self.msgIndex) + " WHERE id=" + str(line) + " and lastMsg < " + str(self.msgIndex))
                 fo.close()
 

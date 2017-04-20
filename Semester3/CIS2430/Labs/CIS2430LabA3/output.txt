@@ -1,0 +1,7 @@
+    Brand: porsche Model:cayman Year:2002 Price: $50000.0
+SUV Model: expedition, michelin
+    Brand: Porsche Model:Cayman Year:2016 Price: $78000.0
+    Brand: Volvo Model:V70 Year:2002 Price: $4500.0
+SUV Model: Expedition, Firestone
+SUV Model: Tahoe, Michelin
+    Brand: Toyota Model:Camry Year:2005 Price: $8000.0

@@ -8,12 +8,14 @@
  * RETURN: (String) url list.
  *
  **/
-function transferSession($arr) {
-    $string = "";
-    foreach ($arr as $key=>$value) {
-        $string = $string . "&" . $key . '=' . $value;
-    } return $string;
-}
+ function transferSession($arr) {
+     $string = "";
+     foreach ($arr as $key=>$value) {
+         if ($key != "form") {
+            $string = $string . "&" . $key . '=' . $value;
+         }
+     } return $string;
+ }
 
 /**
  * writeTemp
@@ -87,9 +89,15 @@ function writeTemp($txt, $noappend=null) {
 
                 break;
             case "mark":
-                exec("./caller.py mark" . $userid, $out, $status);
-                foreach($out as $line) {
-                    echo $line;
+                if(isset($_GET['stream'])) {
+                    exec("./caller.py mark" . $userid, $out, $status);
+                    foreach($out as $line) {
+                        echo $line;
+                    }
+                    $path = "view.php?userid=$userid&";
+                    echo "<form action=\"$path " . transferSession($_GET) . "\" method=\"post\"><button>Back to Streams</button></form>";
+                } else {
+                    header("Location: view.php?view=stream.wpml&userid=$userid&" . transferSession($_GET));
                 }
                 break;
             default:

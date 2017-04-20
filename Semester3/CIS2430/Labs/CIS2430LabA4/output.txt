@@ -1,0 +1,6 @@
+volvo v70 2002 $5001.0
+volvo v60 2001 $5005.0
+Porsche Cayman 2016 $78000.0
+Expedition, Firestone
+Tahoe, Michelin
+Toyota Camry 2005 $8000.0

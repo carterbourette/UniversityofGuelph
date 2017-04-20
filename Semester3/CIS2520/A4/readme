@@ -1,0 +1,58 @@
+——————————————————————————————————————————
+
+Data Structures
+
+Assignment #4
+CIS*2520
+
+Carter Bourette
+Nov 7, 2016
+0916638
+
+——————————————————————————————————————————
+
+Description:
+
+This program takes a data space delimited data file and inserts
+each element into an AVL tree. The program has the ability to
+add/count distinct keys and remove. The tree is self balancing
+thanks to a rotation algorithm.
+
+
+Compilation:
+
+This program can be compiled without error from the A4 folder using:
+
+    "gcc -std=c99 -Wall src/avltree.c -I../include -o ./A4"
+
+The program can also be compiled by typing "make".
+
+
+
+Usage:
+
+The program can be run by executing the following (from the
+A4 folder):
+
+    "./A4"
+
+Or by running the Makefile command
+"make run" from the A4 folder.
+
+    "make"
+
+
+
+Limitations:
+
+It is assumed that the data file will have less than
+500 characters on a single line.
+
+
+
+Testing:
+
+Testing is done using unit test assertions. By passing
+each assertion test we verify that the programs vital
+functions can be report and respond correctly. See
+Testing.h for more on assertions.

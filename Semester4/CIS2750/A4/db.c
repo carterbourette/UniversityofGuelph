@@ -13,15 +13,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-/*#include <mysql/mysql.h>*/
-#include "/usr/local/mysql/include/mysql.h"
+#include <mysql/mysql.h>
+/*#include "/usr/local/mysql/include/mysql.h" mac */
 #include "stringy.h"
 #include "db.h"
 
-#define HOSTNAME  "localhost"
-#define USERNAME  "root"
-#define PASSWORD  "sys"
-#define DATABASE  "A4"
+#define HOSTNAME  "dursley.socs.uoguelph.ca"
+#define USERNAME  "cbourett"
+#define PASSWORD  "0916638"
+#define DATABASE  "cbourett"
 
 /**
  * sqlConnect
@@ -35,7 +35,7 @@ void sqlConnect(Properties* p) {
     mysql_init(&(p->mysql));
     mysql_options(&(p->mysql), MYSQL_READ_DEFAULT_GROUP, "mydb");
     if (!mysql_real_connect(&(p->mysql), HOSTNAME, USERNAME, PASSWORD,DATABASE, 0, NULL, 0)) {
-       printf("Could not connect to host.\n");
+       printError("Could not connect to host.\n",1);
     }
 }
 
@@ -77,10 +77,10 @@ void create(Properties* p) {
     printf("Creating tables...\n");
 
     /* Create the Author table */
-    if (mysql_query(mysql, "create table if not exists Author (id int not null auto_increment, username char(500), primary key (id), unique (username))") != 0)
+    if (mysql_query(mysql, "create table if not exists Author (id int not null auto_increment, username varchar(500), primary key (id), unique (username))") != 0)
         printf("Author table creation failed.\n");
     /* Create the stream table */
-    if (mysql_query(mysql, "create table if not exists Stream (id int not null auto_increment, streamname char(500), primary key (id), unique (streamname))") != 0)
+    if (mysql_query(mysql, "create table if not exists Stream (id int not null auto_increment, streamname varchar(500), primary key (id), unique (streamname))") != 0)
         printf("Stream table creation failed.\n");
     /* Create post table */
     if (mysql_query(mysql, "create table if not exists Post (id int not null auto_increment, author int, stream int, postdate int, message longtext, primary key (id))") != 0)
